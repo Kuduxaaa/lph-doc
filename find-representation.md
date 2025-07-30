@@ -51,3 +51,32 @@
     "message": "The selected case type is invalid."
 }
 ```
+
+
+### ⚙️ Example:
+
+```json
+{
+  "case_type": "Auto Accident",
+  "accident_time": "1 year ago",
+  "hospitalized": "yes",
+  "at_fault": "no",
+  "injured": "yes",
+  "law_firm": "no",
+  "injury_type": "Back or Neck Pain",
+  "case_details": "Rear-ended by another driver on the highway. Still experiencing pain.",
+  "full_name": "Jane Doe",
+  "phone_number": "+11234567890",
+  "email": "jane.doe@example.com",
+  "zip_code": "90210"
+}
+```
+
+`success response`
+
+```json
+{
+    "success": true,
+    "message": "Submission received"
+}
+```
