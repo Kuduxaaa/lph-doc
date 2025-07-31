@@ -1,4 +1,4 @@
-## 📡 Endpoint: POST `/api/v1/find-representation`
+## 📡 Endpoint: POST `/api/v1/contact-us`
 
 **Content-Type**: `application/json`
 
@@ -12,19 +12,11 @@
 
 
 | Field           | Type     | Required | Description                                                                                                                                                   |
-| --------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `case_type`     | `string` | ✅        | One of the following:<br>- `Auto Accident`<br>- `Personal Injury`<br>- `Workers Comp`<br>- `Slip And Fall`<br>- `Medical Malpractice`<br>- `Not Sure / Other` |
-| `accident_time` | `string` | ❌        | Optional. Must be one of:<br>- `1 year ago`<br>- `2 years ago`<br>- `3 years ago`<br>- `More than 3 years ago`                                                |
-| `hospitalized`  | `string` | ❌        | Must be either `yes` or `no`                                                                                                                                  |
-| `at_fault`      | `string` | ❌        | Must be either `yes` or `no`                                                                                                                                  |
-| `injured`       | `string` | ❌        | Must be either `yes` or `no`                                                                                                                                  |
-| `law_firm`      | `string` | ❌        | Must be either `yes` or `no`                                                                                                                                  |
-| `injury_type`   | `string` | ❌        | One of:<br>- `Back or Neck Pain`<br>- `Cuts and Bruises`<br>- `Headaches`<br>- `Broken Bones`<br>- `Other`                                                    |
-| `case_details`  | `string` | ❌        | Optional. Max length: `500` characters                                                                                                                        |
-| `full_name`     | `string` | ✅        | Full name of the person                                                                                                                                       |
-| `phone_number`  | `string` | ✅        | Must be 12 digits (E.164 formatted). Invalid if starts with `+1`                                                                                              |
-| `email`         | `string` | ✅        | Must be valid email format                                                                                                                                    |
-| `zip_code`      | `string` | ✅        | Must be 5 characters                                                                                                                                          |
+| --------------- | -------- | -------- | ------------------------------- |
+| `name`          | `string` | ✅        | User's first name (max 255) |
+| `surname`       | `string` | ✅        | User's surname (max 255) |
+| `email`         | `string` | ✅        | Valid email address (max 255) |
+| `message`       | `string` | ✅        | Message |                                             
 
 ------
 
@@ -34,8 +26,8 @@
 
 ```json
 {
-  "success": true,
-  "message": "Submission received"
+    "success": true,
+    "message": "Thanks for your message. We’ll be in touch"
 }
 ```
 
@@ -43,40 +35,11 @@
 
 ### ❌ Error Response (Validation or Logical Fail):
 
-> HTTP Code: 422 (Unprocessable Entity) (Or may be 400, 404, 500)
+> HTTP Code: 422 (Unprocessable Entity)
 
 ```json
 {
     "success": false,
-    "message": "The selected case type is invalid."
-}
-```
-
-
-### ⚙️ Example:
-
-```json
-{
-  "case_type": "Auto Accident",
-  "accident_time": "1 year ago",
-  "hospitalized": "yes",
-  "at_fault": "no",
-  "injured": "yes",
-  "law_firm": "no",
-  "injury_type": "Back or Neck Pain",
-  "case_details": "Rear-ended by another driver on the highway. Still experiencing pain.",
-  "full_name": "Jane Doe",
-  "phone_number": "+11234567890",
-  "email": "jane.doe@example.com",
-  "zip_code": "90210"
-}
-```
-
-`success response`
-
-```json
-{
-    "success": true,
-    "message": "Submission received"
+    "message": "The surname field is required."
 }
 ```
