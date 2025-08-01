@@ -4,13 +4,23 @@
 
 **Accept**: `application/json`
 
+**Needs Auth**: `YES`
+
 **Returns JSON always.**
+
+This endpoint is used to refresh an expired or soon-to-expire access token. It allows clients to maintain a user's authenticated session without requiring the user to log in again.
+
+The client must provide a valid existing access token (obtained during login) in the Authorization header. If the token is valid and not blacklisted or invalidated, the server will issue a new token with a renewed expiration time, and return updated user information along with it.
+
+This is typically used in token-based authentication flows (e.g., JWT) to support session continuity and avoid forcing users to frequently re-authenticate.
+
+> ℹ️ This endpoint always returns JSON, and is protected by Bearer token authentication.
 
 -------
 
 ### 🔒 Authentication (Bearer)
 
-> Presented token should be received from [auth-login](https://github.com/Kuduxaaa/lph-doc/blob/main/auth-login.md)
+> Presented token should be received from [auth-login](https://github.com/Kuduxaaa/lph-doc/blob/main/auth/auth-login.md)
 
 ```
 Authorization: Bearer [TOKEN...]
@@ -25,7 +35,7 @@ Authorization: Bearer [TOKEN...]
 
 ```json
 {
-    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2xlZ2FscHVsc2VodWIuY29tL2FwaS92MS9hdXRoL2xvZ2luIiwiaWF0IjoxNzUzODg1MDMwLCJleHAiOjE3NTM4ODg2MzAsIm5iZiI6MTc1Mzg4NTAzMCwianRpIjoiVGRRTWJURXJCRkRaQ0ZXNCIsInN1YiI6IjEzMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.nB9uMNfv9zTKj10F10cNyEr3eQTfNIR_hlIPa4JOAjE",
+    "access_token": "eyJ0eXAi...",
     "token_type": "bearer",
     "expires_in": 3600,
     "user": {

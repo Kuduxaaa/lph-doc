@@ -4,6 +4,8 @@
 
 **Accept**: `application/json`
 
+**Needs Auth**: `NO`
+
 **Returns JSON always.**
 
 -------

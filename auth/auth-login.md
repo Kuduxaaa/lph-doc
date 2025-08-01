@@ -4,7 +4,13 @@
 
 **Accept**: `application/json`
 
+**Needs Auth**: `NO`
+
 **Returns JSON always.**
+
+This endpoint handles user authentication using an email and password combination. Upon successful login, it returns a JSON response containing a Bearer access token that can be used to authenticate subsequent API requests. The token follows the JWT (JSON Web Token) standard and includes an expiration time. The response also contains detailed user information to assist client-side session handling.
+
+This endpoint expects and returns data strictly in JSON format. It is intended to be consumed by frontend applications or third-party clients that need to securely authenticate users and interact with protected API routes.
 
 -------
 
@@ -45,6 +51,8 @@
 }
 ```
 
+> 💡 Use `access_token` on future API endpoints with the `Authorization: Bearer <token>` header.
+
 ------
 
 ### ❌ Error Response (Incorrect credentials):
@@ -58,6 +66,8 @@
 }
 ```
 
+> 💥 The email or password is incorrect.
+
 -------
 
 ### ❌ Error Response (Validation or Logical fail)
@@ -70,3 +80,5 @@
     "message": "The password field is required."
 }
 ```
+
+> 😬 So you forgot a required field.

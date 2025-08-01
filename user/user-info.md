@@ -8,6 +8,12 @@
 
 **Returns JSON always.**
 
+This endpoint returns a full snapshot of the authenticated user's profile, including user details, associated attorney data, current team information, active leads, and subscribed plans.
+
+The endpoint is useful for dashboard initialization, user session validation, profile displays, and any client-side logic that depends on current user context.
+
+Authentication via Bearer token is required.
+
 -------
 
 ### 🔒 Authentication (Bearer)
