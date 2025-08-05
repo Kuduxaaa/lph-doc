@@ -18,7 +18,7 @@ Getting one team data.
 
 | Field              | Type     | Required  | Description             |
 | ------------------ | -------- | --------- | ----------------------- |
-| `stars`    | `string` | ✅       | Number of starts from 1 to 5 |
+| `stars`    | `integer` | ✅       | Number of starts from 1 to 5 |
 | `comment`  | `string` | ✅       | User's comment max 1000 symbol
 
 -------
