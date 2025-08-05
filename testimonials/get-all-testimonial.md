@@ -35,64 +35,36 @@ Authorization: Bearer [TOKEN...]
 			"stars": 5,
 			"comment": "<3<3",
 			"created_at": "2025-08-05T14:16:55.000000Z",
-			"user": {
-				"id": 133,
-				"name": "kuro",
-				"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
-				"attorney": {
-					"id": 42,
-					"user_id": 133,
-					"address": "TEST TEST"
-				}
-			}
+			"user_name": "kuro",
+			"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
+			"address": "TEST TEST"
 		},
 		{
 			"id": 1,
 			"stars": 5,
 			"comment": "I like you guys",
 			"created_at": "2025-08-05T14:02:22.000000Z",
-			"user": {
-				"id": 133,
-				"name": "kuro",
-				"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
-				"attorney": {
-					"id": 42,
-					"user_id": 133,
-					"address": "TEST TEST"
-				}
-			}
+			"user_name": "kuro",
+			"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
+			"address": "TEST TEST"
 		},
 		{
 			"id": 3,
 			"stars": 3,
 			"comment": "I like you guys!!!!!!!",
 			"created_at": "2025-08-05T14:14:05.000000Z",
-			"user": {
-				"id": 133,
-				"name": "kuro",
-				"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
-				"attorney": {
-					"id": 42,
-					"user_id": 133,
-					"address": "TEST TEST"
-				}
-			}
+			"user_name": "kuro",
+			"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
+			"address": "TEST TEST"
 		},
 		{
 			"id": 4,
 			"stars": 1,
 			"comment": "Fuck... What the hell is this,...........",
 			"created_at": "2025-08-05T14:14:26.000000Z",
-			"user": {
-				"id": 133,
-				"name": "kuro",
-				"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
-				"attorney": {
-					"id": 42,
-					"user_id": 133,
-					"address": "TEST TEST"
-				}
-			}
+			"user_name": "kuro",
+			"profile_photo_url": "https://ui-avatars.com/api/?name=k&color=7F9CF5&background=EBF4FF",
+			"address": "TEST TEST"
 		}
 	]
 }
