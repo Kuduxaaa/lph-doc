@@ -45,4 +45,5 @@ This endpoint will send password-reset link to user's email. It will looks somet
 {
     "success": false,
     "message": "Email field is required"
+}
 ```
